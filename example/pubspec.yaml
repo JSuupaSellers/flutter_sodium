@@ -1,0 +1,20 @@
+name: flutter_sodium_example
+description: Demonstrates how to use the flutter_sodium plugin.
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  convert: "^2.0.1"
+  
+  cupertino_icons: ^0.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_sodium:
+    path: ../
+
+flutter:
+  uses-material-design: true
