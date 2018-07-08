@@ -45,6 +45,10 @@ public class SwiftFlutterSodiumPlugin: NSObject, FlutterPlugin {
       case "crypto_generichash_keygen": result(crypto_generichash_keygen(call: call))
 <<<<<<< HEAD
 =======
+      case "crypto_generichash_keybytes": result(crypto_generichash_keybytes(call: call))
+      case "crypto_generichash_statebytes": result(crypto_generichash_statebytes(call: call))
+
+      case "crypto_generichash_blake2b_bytes" : result(crypto_generichash_blake2b_bytes(call: call))
 >>>>>>> second/master
 
       case "crypto_kdf_keygen": result(crypto_kdf_keygen(call: call))
@@ -536,6 +540,33 @@ public class SwiftFlutterSodiumPlugin: NSObject, FlutterPlugin {
 
 <<<<<<< HEAD
 =======
+  private func crypto_generichash_keybytes(call: FlutterMethodCall) -> Any
+  {
+    var kb = Data(count: crypto_generichash_keybytes())
+    kb.withUnsafeMutableBytes { kbPtr in 
+      flutter_sodium.crypto_generichash_keybytes(kbPtr)
+    }
+    return FlutterStandardTypedData.init(bytes: kb)
+  }
+
+  private func crypto_generichash_statebytes(call: FlutterMethodCall) -> Any
+  {
+    var sb = Data(count: crypto_generichash_statebytes())
+    sb.withUnsafeMutableBytes { sbPtr in
+      flutter_sodium.crypto_generichash_statebytes(sbPtr)
+    }
+    return FlutterStandardTypedData.init(bytes: sb)
+  }
+
+  private func crypto_generichash_blake2b_bytes(call: FlutterMethodCall) -> Any
+  {
+    var b = Data(count: crypto_generichash_blake2b_bytes())
+    b.withUnsafeMutableBytes { bPtr in
+      flutter_sodium.crypto_generichash_blake2b_bytes(bPtr)
+    }
+    return FlutterStandardTypedData.init(bytes: b)
+  }
+
 >>>>>>> second/master
   private func crypto_kdf_keygen(call: FlutterMethodCall) -> Any
   {

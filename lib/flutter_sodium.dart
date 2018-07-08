@@ -184,6 +184,11 @@ class Sodium {
 
 <<<<<<< HEAD
 =======
+  static Future<Uint8List> cryptoGenerichashBlake2bBytes() async {
+    final Uint8List result = await _channel.invokeMethod('crypto_generichash_blake2b_bytes');
+    return result;
+  }
+
 >>>>>>> second/master
   //
   // crypto_kdf

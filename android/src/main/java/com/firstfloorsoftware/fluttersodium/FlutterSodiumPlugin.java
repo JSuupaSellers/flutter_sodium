@@ -385,6 +385,8 @@ public class FlutterSodiumPlugin implements MethodCallHandler {
 
 <<<<<<< HEAD
 =======
+  private void crypto_generichash_keybytes(MethodCall call, Result result)
+  {
 >>>>>>> second/master
   private void crypto_kdf_keygen(MethodCall call, Result result)
   {
