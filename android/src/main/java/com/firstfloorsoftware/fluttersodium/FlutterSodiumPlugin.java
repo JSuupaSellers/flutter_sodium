@@ -50,6 +50,10 @@ public class FlutterSodiumPlugin implements MethodCallHandler {
         case "crypto_generichash_keygen": crypto_generichash_keygen(call, result); break;
 <<<<<<< HEAD
 =======
+        case "crypto_generichash_statebytes": crypto_generichash_statebytes(call, result); break;
+        case "crypto_generichash_keybytes": crypto_generichash_keybytes(call, result); break;
+
+        case "crypto_generichash_blake2b_bytes": crypto_generichash_blake2b_bytes(call, result); break;
 >>>>>>> second/master
 
         case "crypto_kdf_keygen": crypto_kdf_keygen(call, result); break;
@@ -387,6 +391,22 @@ public class FlutterSodiumPlugin implements MethodCallHandler {
 =======
   private void crypto_generichash_keybytes(MethodCall call, Result result)
   {
+    byte[] kb = new byte[sodium().crypto_generichash_keybytes()];
+    result.success(kb);
+  }
+
+  private void crypto_generichash_statebytes(MethodCall call, Result result)
+  {
+    byte[] sb = ne byte[sodium().crypto_generichash_statebytes()];
+    result.success(sb);
+  }
+
+  private void crypto_generichash_blake2b_bytes(MethodCall call, Result result)
+  {
+    byte[] out = new byte[sodium().crypto_generichash_blake2b_bytes()];
+    result.success(out);
+  }
+
 >>>>>>> second/master
   private void crypto_kdf_keygen(MethodCall call, Result result)
   {
