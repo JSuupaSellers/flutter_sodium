@@ -43,6 +43,9 @@ public class SwiftFlutterSodiumPlugin: NSObject, FlutterPlugin {
       case "crypto_generichash_update": result(crypto_generichash_update(call: call))
       case "crypto_generichash_final": result(crypto_generichash_final(call: call))
       case "crypto_generichash_keygen": result(crypto_generichash_keygen(call: call))
+<<<<<<< HEAD
+=======
+>>>>>>> second/master
 
       case "crypto_kdf_keygen": result(crypto_kdf_keygen(call: call))
       case "crypto_kdf_derive_from_key": result(crypto_kdf_derive_from_key(call: call))
@@ -531,6 +534,9 @@ public class SwiftFlutterSodiumPlugin: NSObject, FlutterPlugin {
     return FlutterStandardTypedData.init(bytes: k)
   }
 
+<<<<<<< HEAD
+=======
+>>>>>>> second/master
   private func crypto_kdf_keygen(call: FlutterMethodCall) -> Any
   {
     var k = Data(count: crypto_kdf_keybytes())

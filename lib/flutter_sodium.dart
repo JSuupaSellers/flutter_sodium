@@ -182,6 +182,9 @@ class Sodium {
     return result;
   }
 
+<<<<<<< HEAD
+=======
+>>>>>>> second/master
   //
   // crypto_kdf
   //
